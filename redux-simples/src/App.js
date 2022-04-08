@@ -26,5 +26,5 @@ function App() {
 
 export default App;
 
-
+//parei na 162//
 //class name linha ajuda a diferenciar o que quero colocar na linha de cima ou de baixo envolvendo numa div classname linha//
