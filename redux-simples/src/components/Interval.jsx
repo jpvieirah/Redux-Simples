@@ -11,7 +11,7 @@ function Intervalo(props) {
             <div className="Interval">
             <span>
                 <strong>Mínimo: </strong>
-                <input type="number" value={min} readOnly/>
+                <input type="number" value={min} onChange={e => props.alterarMinimo(+e.target.value)}/>
             </span>
             <span>
                 <strong>Máximo: </strong>
@@ -30,7 +30,7 @@ function mapStateToProps(state) {
     }
 }
 
-function mapActionsToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
     return {
    alterarMinimo(novoNumero) {
        //action creator -> action
@@ -41,4 +41,4 @@ function mapActionsToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, 
-    mapActionsToProps)(Intervalo)
+    mapDispatchToProps)(Intervalo)
